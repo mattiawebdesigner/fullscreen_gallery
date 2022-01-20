@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fullscreen Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css" />
+        <link rel="stylesheet" href="css/fullscreen_gallery.css" />
+    </head>
+    <body>
+        <h1>Fullscreen Gallery</h1>
+        <hr />
+        
+        <!-- Elenco delle foto -->
+        <div id="album" class="gallery-index">
+            <h1>Titolo dell'album</h1>
+
+            <p class="description">
+                Descrizione dell'album
+            </p>
+
+            <div class="container">
+                <div class="row">
+                    <div data-image-position="0" class="foto col col-sm-5 col-md-3 col-lg-2"
+                         style="background-image: url(https://media.wired.com/photos/593261cab8eb31692072f129/master/pass/85120553.jpg)">
+                    </div>
+                    <div data-image-position="1" class="foto col col-sm-5 col-md-3 col-lg-2"
+                         style="background-image: url(https://cdn.britannica.com/s:800x450,c:crop/34/180334-138-4235A017/subordinate-meerkat-pack.jpg)">
+                    </div>
+                    <div data-image-position="2" class="foto col col-sm-5 col-md-3 col-lg-2"
+                         style="background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/07/07/15/knobbed-hornbill.jpg?width=982&height=726&auto=webp&quality=75)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow -->
+        <div id="gallery" class="fullscreen">
+            <div class="close">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="wrap">
+                <div class="relative">
+                    <div class="prev"><i class="fas fa-arrow-circle-left"></i></div>
+                    <div class="image" data-image-position="0" data-show="false">
+                        <div class="img-box">
+                            <div class="img">
+                                <img src="https://media.wired.com/photos/593261cab8eb31692072f129/master/pass/85120553.jpg" />
+                            </div>
+                        </div>
+
+                        <div class="container-info">
+                            <div class="description">
+                                Descrizione dell'immagine
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image" data-image-position="1" data-show="false">
+                        <div class="img-box">
+                            <div class="img">
+                                <img src="https://cdn.britannica.com/s:800x450,c:crop/34/180334-138-4235A017/subordinate-meerkat-pack.jpg" />
+                            </div>
+                        </div>
+
+                        <div class="container-info">
+                            <div class="description">
+                                Descrizione dell'immagine
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image" data-image-position="2" data-show="false">
+                        <div class="img-box">
+                            <div class="img">
+                                <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/07/07/15/knobbed-hornbill.jpg?width=982&height=726&auto=webp&quality=75" />
+                            </div>
+                        </div>
+
+                        <div class="container-info">
+                            <div class="description">
+                                Descrizione dell'immagine
+                            </div>
+                        </div>
+                    </div>
+                    <div class="next"><i class="fas fa-arrow-circle-right"></i></div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/fullscreen_gallery.js"></script>
+        <script type="text/javascript">
+           jQuery("#gallery").fullscreen_gallery();
+        </script>
+    </body>
+</html>
